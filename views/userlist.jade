@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1.
+    User List
+  h2 Wow! We're fetching data from database! Awesome, right!
+  ul
+    each user, i in userlist
+      li
+        a(href="mailto:#{user.email}")= user.username
+  a(href="/") Home
+
